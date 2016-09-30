@@ -2,6 +2,7 @@
     {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}
     "retry_join": [{{ $containerName := getv "/self/service/containers/0"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
     "bootstrap": false,{{end}}
+    "ui": true,
     "server": true,
     "datacenter": "dc1",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
