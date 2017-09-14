@@ -9,10 +9,6 @@
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
     "client_addr": "{{getv "/self/container/primary_ip"}}",
     "data_dir": "/var/consul",
-    "encrypt": "{{getv "/services/consul/metadata/enc.key"}}",
-    "ca_file": "/opt/rancher/ssl/ca.crt",
-    "cert_file": "/opt/rancher/ssl/consul.crt",
-    "key_file": "/opt/rancher/ssl/consul.key",
     "verify_incoming": true,
     "verify_outgoing": true,
     "log_level": "INFO"
